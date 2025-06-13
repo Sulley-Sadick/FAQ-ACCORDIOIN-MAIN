@@ -1,1 +1,20 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
+
+:root {
+  /* colors */
+  --color-white: #ffffff;
+  --color-purple-100: #f9f0ff;
+  --color-purple-600: #8c6991;
+  --color-purple-950: #2f1533;
+  --main-bg-color: whitesmoke;
+
+  /* fonts */
+  --font-family: "Work Sans";
+  --font-size: 1rem;
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+}

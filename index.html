@@ -12,36 +12,40 @@
     />
 
     <title>Frontend Mentor | FAQ accordion</title>
-    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body
-    class="h-screen bg-no-repeat bg-cover"
-    style="
-      background-image: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.1) 0%,
-          rgba(0, 0, 0, 0.1) 20%,
-          #0000005b 20%,
-          #0000005b 100%
-        ),
-        url(./assets/images/background-pattern-mobile.svg);
-    "
+    class="bg-[var(--color-purple-100)] font-[Work_Sans] relative w-full md:h-screen"
   >
-    <main class="main-container">
-      <section class="about-fm">
-        <div class="faq">
-          <img src="./assets/images/icon-star.svg" alt="star icon" />
-          <h1 class="title">FAQs</h1>
+    <header
+      class="bg-[url(/assets/images/background-pattern-mobile.svg)] bg-center bg-cover bg-no-repeat h-[30rem]"
+    ></header>
+    <main
+      class="bg-[var(--main-bg-color)] px-[1.5rem] py-[1.5rem] max-w-[21.7rem] mx-auto absolute left-0 right-0 top-[75%] rounded-2xl shadow-[1px_10px_2px_var(--color-purple-100)]"
+    >
+      <section>
+        <div class="flex items-center mb-4">
+          <img
+            src="./assets/images/icon-star.svg"
+            alt="star icon"
+            class="mr-6 w-[2rem]"
+          />
+          <h1
+            class="font-[var(--font-weight-700)] text-[var(--color-purple-950)] text-4xl"
+          >
+            FAQs
+          </h1>
         </div>
-        <div class="benefits">
-          <h2 class="benefits-Q">
-            What is Frontend Mentor, and how will it help me?
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="font-[var(--font-weight-700)] text-[var(--font-size)]">
+            What is Frontend Mentor,<br />
+            and how will it help me?
           </h2>
           <img src="./assets/images/icon-minus.svg" alt="minus icon" />
         </div>
       </section>
-      <section class="description">
-        <p>
+      <section class="text-[var(--color-purple-600)] mb-6">
+        <p class="paragraph">
           Frontend Mentor offers realistic coding challenges to help developers
           improve their frontend coding skills with projects in HTML, CSS, and
           JavaScript. It's suitable for all levels and ideal for portfolio
@@ -50,37 +54,39 @@
       </section>
       <section class="Q-and-A-section">
         <div class="seeking-confirmation-container">
-          <div class="heading">
-            <h2 class="seeking-confirmation-Q">Is Frontend Mentor free?</h2>
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-[var(--font-weight-700)] text-[var(--font-size)]">
+              Is Frontend Mentor free?
+            </h2>
             <img src="./assets/images/icon-plus.svg" alt="plus icon" />
           </div>
-          <p class="seeking-confirmation-answer">
+          <p class="text-[var(--color-purple-600)] mb-6">
             Yes, Frontend Mentor offers both free and premium coding challenges,
             with the free option providing access to a range of projects
             suitable for all skill levels.
           </p>
         </div>
         <div class="permission">
-          <div class="heading">
-            <h2 class="permission-question">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-[var(--font-weight-700)] text-[var(--font-size)]">
               Can I use Frontend Mentor projects in my portfolio?
             </h2>
             <img src="./assets/images/icon-plus.svg" alt="plus icon" />
           </div>
-          <p class="permission-answer">
+          <p class="text-[var(--color-purple-600)] mb-6">
             Yes, you can use projects completed on Frontend Mentor in your
             portfolio. It's an excellent way to showcase your skills to
             potential employers!
           </p>
         </div>
         <div class="help-seeking">
-          <div class="heading">
-            <h2 class="help-seeking-question">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-[var(--font-weight-700)] text-[var(--font-size)]">
               How can I get help if I'm stuck on a Frontend Mentor challenge?
             </h2>
             <img src="./assets/images/icon-plus.svg" alt="plus icon" />
           </div>
-          <p class="help-seeking-answer">
+          <p class="text-[var(--color-purple-600)] mb-6">
             The best place to get help is inside Frontend Mentor's Discord
             community. There's a help channel where you can ask questions and
             seek support from other community members.
