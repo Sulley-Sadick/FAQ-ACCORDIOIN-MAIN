@@ -200,6 +200,12 @@
   .max-w-\[35rem\] {
     max-width: 35rem;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -215,11 +221,18 @@
   .rounded-\[1rem\] {
     border-radius: 1rem;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-\[var\(--purple-100\)\] {
     background-color: var(--purple-100);
   }
   .bg-\[var\(--white-color\)\] {
     background-color: var(--white-color);
+  }
+  .bg-\[url\(\/\/assets\/images\/background-pattern-mobile\.svg\)\] {
+    background-image: url(//assets/images/background-pattern-mobile.svg);
   }
   .bg-\[url\(\/assets\/images\/background-pattern-mobile\.svg\)\] {
     background-image: url(/assets/images/background-pattern-mobile.svg);
@@ -242,6 +255,9 @@
   .font-\[var\(--font-family\)\] {
     --tw-font-weight: var(--font-family);
     font-weight: var(--font-family);
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
@@ -268,6 +284,11 @@
     align-items: center;
     justify-content: space-between;
   }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -346,6 +367,7 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
