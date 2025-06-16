@@ -231,6 +231,9 @@
   .bg-\[var\(--white-color\)\] {
     background-color: var(--white-color);
   }
+  .bg-\[url\(\.\/assets\/images\/background-pattern-mobile\.svg\)\] {
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+  }
   .bg-\[url\(\/\/assets\/images\/background-pattern-mobile\.svg\)\] {
     background-image: url(//assets/images/background-pattern-mobile.svg);
   }
