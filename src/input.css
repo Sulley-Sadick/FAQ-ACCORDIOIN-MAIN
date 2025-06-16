@@ -5,23 +5,26 @@
 @import 'tailwindcss';
 
 /* @theme styles */
-@theme {
-    /* font */
-    --font-size: 1rem;
-    --font-family: 'Work Sans', sans-serif;
-    --font-weight-400: 400;
-    --font-weight-600: 600;
-    --font-weight-700: 700;
+@layer base {
+    :root {
+        /* font */
+        --font-size: 5rem;
+        --font-family: 'Work Sans', sans-serif;
+        --font-weight-400: 400;
+        --font-weight-600: 600;
+        --font-weight-700: 700;
 
-    /* color */
-    --purple-100: hsl(275, 100%, 97%);
-    --purple-600: hsl(292, 16%, 49%);
-    --purple-950: hsl(292, 42%, 14%);
-    --white-color: hsl(0, 100%, 100%);
+        /* color */
+        --purple-100: hsl(275, 100%, 97%);
+        --purple-600: hsl(292, 16%, 49%);
+        --purple-950: hsl(292, 42%, 14%);
+        --white-color: hsl(0, 100%, 100%);
+    }
 }
 
-@layer {
-    .flex {
+/* @layer components styles */
+@layer components {
+    .flex-center {
         @apply flex items-center justify-between;
     }
 }

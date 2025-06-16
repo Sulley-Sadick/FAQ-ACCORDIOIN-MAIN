@@ -11,6 +11,12 @@
           "-webkit-text-size-adjust"
         ]
       }
+    ],
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id": "off"
+      }
     ]
   }
 }
