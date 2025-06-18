@@ -6,6 +6,12 @@ const answers = document.querySelectorAll('.answers')
 const buttons = document.querySelectorAll('.button')
 const icons = document.querySelectorAll('#plus-icon')
 
+// Add smooth appearance of the page
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('opacity-0')
+    document.body.classList.add('opacity-100')
+})
+
 /* Function: To update icons */
 const updateIcon = function (index, isHidden) {
     icons[index].src = isHidden
