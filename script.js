@@ -2,19 +2,39 @@
 'use strict'
 
 /* Selecting elements */
-const plusIcons = document.querySelectorAll('#plus-icon')
-const minusIcon = document.getElementById('minus-icon')
-const paragraphs = document.querySelectorAll('.paragraph')
+const questionsEl = document.querySelectorAll('.questions')
+const answersEl = document.querySelectorAll('.answers')
+const icons = document.querySelectorAll('#plus-icon')
 
-plusIcons.forEach((plusIcon) => {
-    plusIcon.addEventListener('click', () => {
-        if ((plusIcon.src = 'assets/images/icon-plus.svg')) {
-            plusIcon.src = 'assets/images/icon-minus.svg'
-        } else {
-            plusIcon.src = 'assets/images/icon-plus.svg'
-        }
-        for (const paragraph of paragraphs) {
-            paragraph.style.display = 'block'
-        }
+/* Function: To show/hide icon/ans */
+
+/* Function: To update the icon */
+const updateIcons = function (index, isHidden) {
+    icons[index].src = isHidden
+        ? 'assets/images/icon-plus.svg'
+        : 'assets/images/icon-minus.svg'
+}
+
+/*  Add click eventListener to questions */
+questionsEl.forEach((question, index) => {
+    question.addEventListener('click', function () {
+        const isHidden = answersEl[index].classList.toggle('hidden')
+        updateIcons(index, isHidden)
     })
+})
+
+/* Add click eventListener to icon */
+icons.forEach((icon, index) => {
+    icon.addEventListener('click', function () {
+        const isHidden = answersEl[index].classList.toggle('hidden')
+
+        updateIcons(index, isHidden)
+    })
+})
+
+/* Add keydown eventListener  */
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'tab') {
+    }
 })
