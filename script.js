@@ -12,19 +12,31 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('opacity-100')
 })
 
-/* Function: To update icons */
-const updateIcon = function (index, isHidden) {
-    icons[index].src = isHidden
-        ? 'assets/images/icon-plus.svg'
-        : 'assets/images/icon-minus.svg'
-}
-
 /* Add eventListener to button */
 buttons.forEach((button, index) => {
     button.addEventListener('click', function () {
-        const isHidden = answers[index].classList.toggle('hidden')
+        const isActive = answers[index].classList.toggle('hidden')
+
+        /* /calling hideAnswers function */
+        hideAnswers(index)
 
         /* calling update icon */
-        updateIcon(index, isHidden)
+        changeIcon(index, isActive)
     })
 })
+
+/* Function: To remove all answers except the index  */
+const hideAnswers = function (exceptIndex) {
+    answers.forEach((answer, index) => {
+        if (index !== exceptIndex) {
+            answer.classList.add('hidden')
+            changeIcon(index, true)
+        }
+    })
+}
+/* Function: To update icons */
+const changeIcon = function (index, isActive) {
+    icons[index].src = isActive
+        ? 'assets/images/icon-plus.svg'
+        : 'assets/images/icon-minus.svg'
+}
